@@ -7,6 +7,21 @@ module.exports = {
         })
     },
     create: (req, res) => {
+        try {
+            const {username, age} = req.body;
+
+            if (!age || !username) {
+                throw new Error('Wrong username or age');
+            }
+
+            userModel.create({username, age});
+
+            return res.redirect('/users');
+        } catch (err) {
+            return res.render('users-error.hbs', {
+                message: err.message
+            });
+        }
     },
     removeById: (req, res) => {
     }
