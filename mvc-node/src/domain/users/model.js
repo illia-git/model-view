@@ -32,6 +32,7 @@ module.exports = {
     removeByUsername: ({username}) => {
     },
     getAll: () => {
+        return users;
     },
     getById: ({id}) => {
     }
