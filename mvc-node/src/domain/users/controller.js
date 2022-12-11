@@ -24,5 +24,22 @@ module.exports = {
         }
     },
     removeById: (req, res) => {
+        try {
+            const id = req.query.id;
+
+            if (!id) {
+                throw new Error('Missing id');
+            }
+
+            userModel.removeById({id});
+
+            res.render('users-view.hbs', {
+                users: userModel.getAll()
+            });
+        } catch (err) {
+            return res.render('users-error.hbs', {
+                message: err.message
+            });
+        }
     }
 }
