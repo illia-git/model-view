@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Users</title>
+    <meta charset="utf-8"/>
+</head>
+<body>
+<h1>Create new user</h1>
+<form method="POST" action="/users/create">
+    <label for="username">Username</label>
+    <input type="text" name="username" id="username"/><br>
+    <label for="age">Age</label>
+    <input type="number" name="age" id="age" min="1" max="110"/><br>
+    <input type="submit" value="Create"/>
+</form>
+<h1>Users list</h1>
+{{#each users}}
+    <div style="border: 1px solid green; padding: 15px">
+        <h3>Username - {{this.username}}</h3>
+        <p>Age - {{this.age}}</p>
+        <button>Delete</button>
+    </div>
+{{/each}}
+</body>
+</html>
