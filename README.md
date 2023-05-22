@@ -1,50 +1,59 @@
+# Model-View-Controller (MVC) Example Implementation
 
-# Model - View - Controller
-## Examples how to implement MVC on server and client sides
+This repository provides an example implementation of the Model-View-Controller (MVC) architectural pattern on both the server and client sides. MVC is a widely used design pattern in software development that separates an application into three interconnected components: the model, the view, and the controller. This structure helps in organizing code, improving maintainability, and promoting code reusability.
 
+## Getting Started
 
+### Prerequisites
 
-## Run Locally
+Make sure you have the following installed:
 
-Clone the project
+- Git
+- Node.js (v12 or higher)
+- npm (Node Package Manager)
+
+### Installation
+Clone the repository to your local machine using Git:
 
 ```bash
-  git clone https://github.com/illia-git/model-view.git
+git clone https://github.com/illia-git/model-view.git
 ```
-### Front
-Go to the project directory
+
+### Frontend (Client Side)
+Navigate to the client-side project directory:
 
 ```bash
   cd mvc-front
 ```
 
-Install dependencies
+Install the project dependencies:
 
 ```bash
   npm install
 ```
 
-Start the server
+Start the development server:
 
 ```bash
   npm run dev
 ```
-### Node
-Go to the project directory
+### Backend (Server Side)
+Navigate to the server-side project directory:
 
 ```bash
   cd mvc-node
 ```
 
-Install dependencies
+Install the project dependencies:
 
 ```bash
   npm install
 ```
 
-Start the server (ru)
+Start the server:
 
 ```bash
   npm run start
 ```
-
+### Conclusion
+By following the steps above, you can run the MVC example implementation on your local machine. Feel free to explore the code and customize it according to your needs. The separation of concerns provided by the MVC pattern will help you build scalable and maintainable applications.
